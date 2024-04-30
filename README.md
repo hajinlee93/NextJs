@@ -76,6 +76,15 @@ nextJs 는 자동적으로 server side rendering 이 됨 -> 자바스크립트�
 
 NextJs에서는 모든것이 server side rendering 되고 pre render되어 유저에게 자바스크립트를 다운받기 전에 html을 먼저 보여준다 그 후 client components 만이 hydrate되고 interactive 하게 되는것
 
-Client component vs. Server component
+Dynamic routes
+동적으로 받고 싶은 경우 대괄호[] 필요
+
+
+Movie API
+https://nomad-movies.nomadcoders.workers.dev
+
+JSON Viewer (구글 확장프로그램)
+https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
 
 
