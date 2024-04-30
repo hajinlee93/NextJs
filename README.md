@@ -74,6 +74,8 @@ nextJs 는 자동적으로 server side rendering 이 됨 -> 자바스크립트�
 모든 컴포넌트들과 페이지들은 먼저 백엔드에서 렌더링됨
 그리고 그것들은 html로 변환된다.
 
+NextJs에서는 모든것이 server side rendering 되고 pre render되어 유저에게 자바스크립트를 다운받기 전에 html을 먼저 보여준다 그 후 client components 만이 hydrate되고 interactive 하게 되는것
+
 Client component vs. Server component
 
 
