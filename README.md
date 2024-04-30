@@ -86,5 +86,9 @@ https://nomad-movies.nomadcoders.workers.dev
 JSON Viewer (구글 확장프로그램)
 https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
 
+fetch
+Next.js는 기본 웹 fetch() API를 확장하여 서버의 각 요청이 자체 영구 캐싱 의미를 설정할 수 있도록 합니다.
+https://nextjs.org/docs/app/api-reference/functions/fetch
+
 
 
