@@ -33,10 +33,20 @@ export default function Navigation() {
             <li>
                 <Link href="/about-us">About Us</Link> {path === "/about-us" ? "🫣" : ""}
             </li>
-            <li>
+            {/* <li>
                 <button onClick={()=>setCount(c => c+1)}>{count}</button>
-            </li>
+            </li> */}
         </ul>
     </nav>
     );
 }
+
+/**
+ * 
+ * className={styles.nav} 이런 식으로 자바스크립트 처럼 부르는 이유는 
+ * 개발자도구로 켜서 볼 때 nav에 클라스 명이 임의의 랜덤한 text로 오기 때문에 이렇게 부른다
+ * -> 클라스 명이 같아도 충돌이 절대 일어날 수 없다
+ * 
+ * 
+ * 
+ * */ 
