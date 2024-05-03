@@ -2,6 +2,8 @@
 // import { useEffect, useState } from "react"
 
 import Link from "next/link";
+import Movie from "../../components/movie";
+import styles from "../../styles/home.module.css"
 
 export const metadata = {
   title: "Home",
@@ -9,7 +11,7 @@ export const metadata = {
 export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
-//   await new Promise((resolve) => setTimeout(resolve, 1000));
+  //   await new Promise((resolve) => setTimeout(resolve, 1000));
   return fetch(API_URL).then((response) => response.json());
 }
 
@@ -54,13 +56,25 @@ export default async function HomePage() {
   const movies = await getMovies();
 
   return (
-    <div>
+    <div className={styles.container}>
       {/* {isLoading ? "Loading..." L: JSON.stringify(movies)} */}
       {/* {JSON.stringify(movies)} */}
       {movies.map((movie) => (
-        <li key={movie.id}>
-          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-        </li>
+        // <li key={movie.id}>
+        //   <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+        // </li>
+
+        // <div key={movie.id}>
+        //     <img src={movie.poster_path} alt={movie.title} />
+        //     <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+        // </div>
+
+        <Movie
+          key={movie.id}
+          id={movie.id}
+          title={movie.title}
+          poster_path={movie.poster_path}
+        />
       ))}
     </div>
   );

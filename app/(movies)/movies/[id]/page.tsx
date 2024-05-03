@@ -66,13 +66,13 @@ end Fetching
 
   return (
     <div>
-        <h3>Movie detail page</h3>
+        {/* <h3>Movie detail page</h3> */}
       <Suspense fallback={<h1>Loading movies info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
-      <Suspense fallback={<h1>Loading movies videos</h1>}>
+      {/* <Suspense fallback={<h1>Loading movies videos</h1>}>
         <MovieVideos id={id} />
-      </Suspense>
+      </Suspense> */}
     </div>
   );
 }
