@@ -1,12 +1,24 @@
 import { resolve } from "path";
-import { API_URL } from "../../../(home)/page";
+// import { API_URL, getMovies } from "../../../(home)/page";
 import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
-import MovieInfo from "../../../../components/movie-info";
+// import MovieInfo from "../../../../components/movie-info";
+import MovieInfo, { getMovies } from "../../../../components/movie-info";
 
-export const metadata = {
-  title: "Movies",
-};
+
+interface IParams {
+  params: { id: string };
+}
+
+export async function generateMetadata({ params: { id } }: IParams) {
+  const movie = await getMovies(id);
+  return {
+    title: movie.title,
+  };
+}
+// export const metadata = {
+//   title: "Movies",
+// };
 
 // async function getMovies(id: string) {
 //   console.log(`Fetching moives : ${Date.now()}`);
@@ -21,12 +33,7 @@ export const metadata = {
 //   const response = await fetch(`${API_URL}/${id}`);
 //   return response.json();
 // }
-
-export default async function MovieDetail({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+export default async function MovieDetailPage({ params: { id } }: IParams) {
   // params 내부에 있는 id 를 가지고 올꺼고 그 params의 id는 문자열로 되어있다는 뜻
 
   //   console.log('Start Fetching');
@@ -66,13 +73,13 @@ end Fetching
 
   return (
     <div>
-        {/* <h3>Movie detail page</h3> */}
+      {/* <h3>Movie detail page</h3> */}
       <Suspense fallback={<h1>Loading movies info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
-      {/* <Suspense fallback={<h1>Loading movies videos</h1>}>
+      <Suspense fallback={<h1>Loading movies videos</h1>}>
         <MovieVideos id={id} />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 }
