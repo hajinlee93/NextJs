@@ -22,3 +22,12 @@ export default function Movie({title,id,poster_path}:IMovieProps) {
     </div>
   );
 }
+
+
+/**
+ * 
+ * prefetch
+ * 미리 fetch를 하게 되서 다음페이지로 넘어가기 전에 data를 미리 가지고 있게된다 
+ * 이것으로 로딩이 오래걸리는 페이지는 미리 땡겨 와서 작업하게되면 될듯 함
+ * 
+ * */ 
