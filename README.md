@@ -1,6 +1,6 @@
 # NextJs 공부용 레파지토리
 
-
+#  배포한url https://nextjs-movies-theta-ivory.vercel.app/
 
 npm init -y
 (Npm not found 뜨면 node.js 다운로드 해주기)
