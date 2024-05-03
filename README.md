@@ -1,4 +1,5 @@
-# NextJs
+# NextJs 공부용 레파지토리
+
 
 
 npm init -y
@@ -89,6 +90,22 @@ https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnh
 fetch
 Next.js는 기본 웹 fetch() API를 확장하여 서버의 각 요청이 자체 영구 캐싱 의미를 설정할 수 있도록 합니다.
 https://nextjs.org/docs/app/api-reference/functions/fetch
+
+
+
+Vercel 이란?
+Vercel은 Next.js 개발 팀에서 만든 호스팅 사이트입니다.
+
+비슷한 서비스로는 Netlify라는 서비스도 있지만 위에서 말했다시피 배포하려는 소스가 Next기반이기에 vercel으로 배포하겠습니다.
+
+Vercel Document
+
+Vercel은 사용자의 Work flow에 완벽하게 맞는 정적 사이트 및 서버리스 기능을 위한 클라우트 플랫폼입니다.
+
+개발자들은 Configuration, Supervision 없이 즉시 배포할 수 있고 자동으로 확장하며 웹 사이트 및 웹 서비스를 호스팅할 수 있습니다.
+
+Github, GitLab, Bitbucket 저장소와 연결하여 매번 push를 진행할 때 마다 배포할 수 있습니다.
+
 
 
 
